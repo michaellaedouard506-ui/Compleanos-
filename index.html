@@ -92,6 +92,19 @@
             background: #7dd3fc;
             border-radius: 4px;
         }
+
+        /* Circle for Bday Date in Calendar */
+        .bday-circle {
+            position: relative;
+        }
+        .bday-circle::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border: 2.5px solid #0284c7;
+            border-radius: 9999px;
+            animation: pulse-glow 1.5s infinite;
+        }
     </style>
 </head>
 <body class="h-screen w-screen overflow-hidden flex flex-col justify-between items-center relative select-none p-4">
@@ -173,18 +186,45 @@
             </button>
         </section>
 
-        <!-- PAGE 4: Calendrier -->
-        <section id="page-4" class="page-step w-full glass-card p-8 sm:p-10 rounded-3xl text-center flex flex-col items-center justify-center hidden opacity-0 transform scale-95 transition-all duration-500">
-            <h3 class="text-2xl font-heading font-bold text-sky-900 mb-6 flex items-center gap-2">
+        <!-- PAGE 4: VRAI CALENDRIER DU MOIS D'OCTOBRE -->
+        <section id="page-4" class="page-step w-full glass-card p-6 sm:p-8 rounded-3xl text-center flex flex-col items-center justify-center hidden opacity-0 transform scale-95 transition-all duration-500">
+            <h3 class="text-2xl font-heading font-bold text-sky-900 mb-4 flex items-center gap-2">
                 <i class="fa-regular fa-calendar-days text-sky-600"></i> La Date Spéciale
             </h3>
             
-            <div class="w-full max-w-xs bg-white rounded-2xl p-6 border border-sky-100 shadow-xl mb-8 relative">
-                <div class="bg-gradient-to-r from-sky-400 to-blue-500 text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full mb-4 inline-block">
-                    Jour J d'Edou
+            <!-- Real October Calendar Grid -->
+            <div class="w-full max-w-xs bg-white rounded-2xl p-4 border border-sky-100 shadow-xl mb-6 text-left">
+                <!-- Month Header -->
+                <div class="flex justify-between items-center mb-3 pb-2 border-b border-sky-100">
+                    <span class="font-heading font-extrabold text-sky-900 text-base">OCTOBRE</span>
+                    <span class="bg-sky-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Jour J d'Edou</span>
                 </div>
-                <div class="text-6xl font-heading font-black text-sky-900 my-2">19</div>
-                <div class="text-sm font-bold text-sky-600 uppercase tracking-wider">Ans de Pur Talents ✨</div>
+
+                <!-- Days of week -->
+                <div class="grid grid-cols-7 text-center text-[11px] font-bold text-sky-600 mb-2">
+                    <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                </div>
+
+                <!-- Calendar Days -->
+                <div class="grid grid-cols-7 text-center text-xs gap-y-1.5 text-slate-600 font-semibold">
+                    <!-- October Starts on Thursday (empty slots L, M, M) -->
+                    <span class="opacity-0">1</span><span class="opacity-0">1</span><span class="opacity-0">1</span>
+                    <span>1</span><span>2</span><span>3</span><span>4</span>
+                    <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                    <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                    <span>19</span><span>20</span><span>21</span>
+                    
+                    <!-- BDAY 22 CIRCLED -->
+                    <div class="relative flex items-center justify-center font-black text-sky-900">
+                        <span class="w-7 h-7 bg-amber-300 text-sky-900 rounded-full flex items-center justify-center border-2 border-sky-600 shadow-md animate-bounce relative z-10">
+                            22
+                        </span>
+                        <span class="absolute -top-3 text-[10px]">👑</span>
+                    </div>
+
+                    <span>23</span><span>24</span><span>25</span>
+                    <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                </div>
             </div>
 
             <button onclick="nextPage()" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3.5 px-8 rounded-2xl text-base shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
@@ -353,7 +393,7 @@
             </button>
         </section>
 
-        <!-- PAGE 10: Letters Carousel (6 Letters with Michaella in 1st position) -->
+        <!-- PAGE 10: Letters Carousel (Michaella 1st) -->
         <section id="page-10" class="page-step w-full glass-card p-5 sm:p-6 rounded-3xl text-center flex flex-col items-center justify-between hidden opacity-0 transform scale-95 transition-all duration-500 h-[480px]">
             <h3 class="text-xl font-heading font-bold text-sky-900 mb-1">Les Lettres d'Anniversaire 💌</h3>
             <p id="letter-counter" class="text-xs font-bold text-sky-600">Lettre 1 sur 6</p>
@@ -367,7 +407,7 @@
                     <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
                         Cher Edou,
 
-                        Je te souhaite un joyeux anniversaire. Que le Seigneur te protège et t'accompagne dans chaque étape de ta vie.
+                        Je te souhaite un joyeux anniversaire. Que le Seigneur te protège et t'accompagne dans chaque étape de ta vie .
 
                         Je n'ai pas trop d'inspiration, mais sache que tu es le meilleur ami que je puisse avoir. Je voudrais te remercier pour toutes ces fois où tu as été là pour moi. Tu es un très bon ami et un bon jumeau. Merci pour ton soutien, toutes ces fois où tu écoutais mes plaintes, soit à propos de Salomon soit à propos d'autres personnes de mon entourage sans broncher, et pour la bonne humeur que tu apportes à tes proches. Bien que tu sois parfois insupportable, cela ne retire rien à la belle âme que tu possèdes. Tu ne serais pas Edoudou si tu ne m'embêtais pas. Tous tes précieux conseils resteront gravés en moi, telle une marque indélébile. Même si je me bats très souvent avec toi, je t'apprécie énormément. Tu es comme le grand frère que je n'ai pas pu avoir : à me réprimander quand je le mérite, m'encourager, supporter mes infantilismes, me consoler quand je suis triste... Tu m'as apporté tant de bonnes choses. J'ai même rencontré mon âme sœur grâce à toi, je t'en serai éternellement reconnaissante 😇. Tu es une personne dotée d'un très bon cœur et d'une belle âme, fidèle à sa famille et à ses amis 🐥.
 
@@ -457,11 +497,11 @@
             </div>
         </section>
 
-        <!-- PAGE 11: Interactive Dashboard (Profile section removed, Spotify & Photos fixed) -->
+        <!-- PAGE 11: Interactive Dashboard (Spotify Embed + Fallback Player + Photos) -->
         <section id="page-11" class="page-step w-full glass-card p-5 sm:p-6 rounded-3xl text-center flex flex-col items-center justify-between hidden opacity-0 transform scale-95 transition-all duration-500 h-[460px]">
             <h3 class="text-xl font-heading font-bold text-sky-900 mb-2">Espace Interactif ✨</h3>
 
-            <!-- Nav Tabs (Profil removed) -->
+            <!-- Nav Tabs -->
             <div class="flex rounded-xl bg-sky-200/60 p-1 w-full gap-1">
                 <button onclick="switchTab('songs')" id="tab-songs" class="flex-1 py-1.5 rounded-lg font-bold text-xs bg-sky-600 text-white shadow">Songs 🎵</button>
                 <button onclick="switchTab('photos')" id="tab-photos" class="flex-1 py-1.5 rounded-lg font-bold text-xs text-sky-800">Photos 📸</button>
@@ -470,28 +510,34 @@
             <!-- Tab Contents -->
             <div class="w-full my-auto text-left">
                 
-                <!-- Songs Tab (Spotify Fixed with Direct Player & Backup Link) -->
+                <!-- Songs Tab -->
                 <div id="content-songs" class="tab-content block bg-white/90 p-3 rounded-2xl border border-sky-100 shadow-sm text-center">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-xs font-bold text-sky-900"><i class="fa-brands fa-spotify text-emerald-500 text-sm mr-1"></i> Playlist d'Edou</span>
-                        <a href="https://open.spotify.com/playlist/0akW9Be58NFwywFRiDQ8Ln" target="_blank" class="text-[10px] bg-emerald-500 hover:bg-emerald-600 text-white px-2.5 py-1 rounded-full font-bold transition-all">
-                            Ouvrir Spotify <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        <span class="text-xs font-bold text-sky-900"><i class="fa-brands fa-spotify text-emerald-500 text-sm mr-1"></i> Playlist Edoudou</span>
+                        <a href="https://open.spotify.com/playlist/0akW9Be58NFwywFRiDQ8Ln" target="_blank" rel="noopener noreferrer" class="text-[10px] bg-emerald-500 hover:bg-emerald-600 text-white px-2.5 py-1 rounded-full font-bold transition-all shadow-sm">
+                            Spotify App <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                         </a>
                     </div>
 
-                    <div class="w-full rounded-xl overflow-hidden shadow-inner bg-black/5 flex items-center justify-center min-h-[170px]">
+                    <!-- Embedded Spotify Iframe (Fixed URL format) -->
+                    <div class="w-full rounded-xl overflow-hidden shadow-inner bg-black/5 flex flex-col items-center justify-center">
                         <iframe style="border-radius:12px" 
-                            src="https://open.spotify.com/embed/playlist/0akW9Be58NFwywFRiDQ8Ln?utm_source=generator&theme=0" 
+                            src="https://open.spotify.com/embed/playlist/0akW9Be58NFwywFRiDQ8Ln?utm_source=generator" 
                             width="100%" 
-                            height="170" 
+                            height="152" 
                             frameBorder="0" 
+                            allowfullscreen="" 
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                             loading="lazy">
                         </iframe>
                     </div>
+
+                    <p class="text-[10px] text-slate-500 mt-2 font-medium">
+                        💡 Tu peux cliquer sur "Spotify App" en haut si le lecteur web restreint la lecture.
+                    </p>
                 </div>
 
-                <!-- Photos Tab (Images displayed) -->
+                <!-- Photos Tab -->
                 <div id="content-photos" class="tab-content hidden grid grid-cols-2 gap-3">
                     <div class="h-44 bg-gradient-to-br from-sky-100 to-sky-200 rounded-2xl border border-sky-200 p-2 flex flex-col items-center justify-center text-center shadow-sm relative overflow-hidden group">
                         <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=400&q=80" alt="19 Ans" class="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-80 group-hover:scale-110 transition-transform duration-500" />
@@ -684,7 +730,9 @@
                 b.classList.add('text-sky-800');
             });
 
-            document.getElementById(`content-${tabName}`).classList.remove('hidden');
+            const targetContent = document.getElementById(`content-${tabName}`);
+            if (targetContent) targetContent.classList.remove('hidden');
+
             const activeBtn = document.getElementById(`tab-${tabName}`);
             if (activeBtn) {
                 activeBtn.classList.add('bg-sky-600', 'text-white', 'shadow');
