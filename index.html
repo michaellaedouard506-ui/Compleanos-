@@ -84,7 +84,7 @@
             animation: pulse-glow 2s infinite;
         }
 
-        /* Custom Scrollbar for inner card tabs */
+        /* Custom Scrollbar */
         .custom-scroll::-webkit-scrollbar {
             width: 4px;
         }
@@ -200,38 +200,24 @@
             </h2>
             <p class="text-sky-700 text-xs mb-4 font-medium">Dattebayo ! Une année de plus au sommet ! 🍃</p>
 
-            <!-- Naruto SVG Illustration with Birthday Party Hat -->
             <div class="relative my-2 w-44 h-44 bg-gradient-to-b from-amber-100 to-sky-100 rounded-full flex items-center justify-center border-4 border-white shadow-inner p-2">
                 <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-md">
-                    <!-- Party Hat -->
                     <polygon points="100,10 75,65 125,65" fill="#38bdf8" />
                     <polygon points="100,10 85,65 115,65" fill="#0284c7" />
                     <circle cx="100" cy="10" r="7" fill="#f59e0b" />
                     <circle cx="95" cy="35" r="2.5" fill="#fff" />
                     <circle cx="108" cy="48" r="2" fill="#fff" />
-                    
-                    <!-- Naruto Head Base -->
                     <path d="M 60 100 Q 100 160 140 100 Q 140 70 60 70 Z" fill="#ffdbac" />
-                    
-                    <!-- Spiky Yellow Hair -->
                     <path d="M 50 85 L 40 60 L 60 70 L 65 45 L 80 65 L 100 40 L 120 65 L 135 45 L 140 70 L 160 60 L 150 85 Z" fill="#facc15" stroke="#eab308" stroke-width="2" />
-                    
-                    <!-- Headband -->
                     <rect x="58" y="70" width="84" height="20" fill="#1e293b" rx="3" />
                     <rect x="80" y="73" width="40" height="14" fill="#94a3b8" rx="2" />
                     <circle cx="100" cy="80" r="3" fill="none" stroke="#1e293b" stroke-width="1.5" />
-                    
-                    <!-- Eyes Happy -->
                     <path d="M 75 105 Q 85 95 90 105" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" />
                     <path d="M 110 105 Q 115 95 125 105" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" />
-                    
-                    <!-- Whiskers -->
                     <line x1="62" y1="110" x2="72" y2="108" stroke="#d4a373" stroke-width="2"/>
                     <line x1="60" y1="115" x2="72" y2="115" stroke="#d4a373" stroke-width="2"/>
                     <line x1="138" y1="110" x2="128" y2="108" stroke="#d4a373" stroke-width="2"/>
                     <line x1="140" y1="115" x2="128" y2="115" stroke="#d4a373" stroke-width="2"/>
-
-                    <!-- Big Smile -->
                     <path d="M 85 125 Q 100 145 115 125 Z" fill="#ef4444" />
                 </svg>
             </div>
@@ -247,9 +233,7 @@
             <h3 class="text-2xl font-heading font-bold text-sky-900 mb-1">Make a wish 🎂</h3>
             <p class="text-sky-700 text-xs mb-6 font-medium">Click the button below to blow out your candles!</p>
 
-            <!-- CSS Interactive Cake -->
             <div class="my-4 relative flex flex-col items-center cursor-pointer" onclick="blowCandles()">
-                <!-- Candle Flames -->
                 <div class="flex gap-4 mb-1 z-10">
                     <div class="candle relative flex flex-col items-center">
                         <div class="candle-flame w-4 h-6 bg-gradient-to-t from-amber-500 via-orange-400 to-yellow-200 rounded-full mb-1 shadow-md"></div>
@@ -265,7 +249,6 @@
                     </div>
                 </div>
 
-                <!-- Cake Layers -->
                 <div class="w-44 h-10 bg-gradient-to-r from-sky-300 via-white to-sky-300 rounded-t-2xl border-b-4 border-sky-400 shadow-sm relative flex items-center justify-around px-4">
                     <div class="w-3 h-3 bg-pink-300 rounded-full"></div>
                     <div class="w-3 h-3 bg-yellow-300 rounded-full"></div>
@@ -294,20 +277,14 @@
             </h2>
             <p class="text-sky-700 text-xs mb-6 font-medium">Quelque chose de spécial t'attend à la page suivante !</p>
 
-            <!-- Naruto Thumbs Up Illustration -->
             <div class="w-40 h-40 bg-white/80 rounded-full border-4 border-sky-300 shadow-inner flex items-center justify-center p-2 mb-6">
                 <svg viewBox="0 0 100 100" class="w-full h-full">
                     <circle cx="50" cy="45" r="25" fill="#ffdbac" />
-                    <!-- Hair -->
                     <path d="M 25 40 L 20 25 L 35 30 L 40 15 L 50 28 L 60 15 L 65 30 L 80 25 L 75 40 Z" fill="#facc15" />
-                    <!-- Headband -->
                     <rect x="28" y="32" width="44" height="10" fill="#1e293b" rx="2" />
-                    <!-- Eyes Wink -->
                     <path d="M 38 45 L 44 45" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
                     <path d="M 56 42 Q 60 48 64 42" fill="none" stroke="#1e293b" stroke-width="2"/>
-                    <!-- Smile -->
                     <path d="M 42 56 Q 50 64 58 56" fill="none" stroke="#1e293b" stroke-width="2"/>
-                    <!-- Thumbs up -->
                     <circle cx="75" cy="65" r="8" fill="#ffdbac" />
                     <path d="M 75 58 L 75 66" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
@@ -376,16 +353,48 @@
             </button>
         </section>
 
-        <!-- PAGE 10: Letters Carousel -->
+        <!-- PAGE 10: Letters Carousel (6 Letters with Michaella in 1st position) -->
         <section id="page-10" class="page-step w-full glass-card p-5 sm:p-6 rounded-3xl text-center flex flex-col items-center justify-between hidden opacity-0 transform scale-95 transition-all duration-500 h-[480px]">
             <h3 class="text-xl font-heading font-bold text-sky-900 mb-1">Les Lettres d'Anniversaire 💌</h3>
-            <p id="letter-counter" class="text-xs font-bold text-sky-600">Lettre 1 sur 4</p>
+            <p id="letter-counter" class="text-xs font-bold text-sky-600">Lettre 1 sur 6</p>
 
             <!-- Letter Display Box -->
             <div class="w-full bg-white/95 border border-sky-200 rounded-2xl p-4 text-left shadow-sm my-2 h-[310px] overflow-y-auto custom-scroll relative">
                 
-                <!-- Letter 1: Mario / Cousin -->
+                <!-- Letter 1: Michaella (FIRST) -->
                 <div id="letter-1" class="letter-pane block">
+                    <div class="text-sky-800 font-heading font-bold text-sm mb-1">🐣 De Michaella</div>
+                    <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
+                        Cher Edou,
+
+                        Je te souhaite un joyeux anniversaire. Que le Seigneur te protège et t'accompagne dans chaque étape de ta vie.
+
+                        Je n'ai pas trop d'inspiration, mais sache que tu es le meilleur ami que je puisse avoir. Je voudrais te remercier pour toutes ces fois où tu as été là pour moi. Tu es un très bon ami et un bon jumeau. Merci pour ton soutien, toutes ces fois où tu écoutais mes plaintes, soit à propos de Salomon soit à propos d'autres personnes de mon entourage sans broncher, et pour la bonne humeur que tu apportes à tes proches. Bien que tu sois parfois insupportable, cela ne retire rien à la belle âme que tu possèdes. Tu ne serais pas Edoudou si tu ne m'embêtais pas. Tous tes précieux conseils resteront gravés en moi, telle une marque indélébile. Même si je me bats très souvent avec toi, je t'apprécie énormément. Tu es comme le grand frère que je n'ai pas pu avoir : à me réprimander quand je le mérite, m'encourager, supporter mes infantilismes, me consoler quand je suis triste... Tu m'as apporté tant de bonnes choses. J'ai même rencontré mon âme sœur grâce à toi, je t'en serai éternellement reconnaissante 😇. Tu es une personne dotée d'un très bon cœur et d'une belle âme, fidèle à sa famille et à ses amis 🐥.
+
+                        À l'occasion de ton 19e anniversaire, je te souhaite tout ce qu'il y a de meilleur dans la vie. Profite de ton existence tout en gardant un juste milieu : écoute les conseils des anciens, prie, aie le courage d'extérioriser tes sentiments et surtout repose-toi... DOOORRRRRSSSS !
+
+                        Happy 19th Birthday Edoudouuu ☺️🥳🎂💞✨✨✨
+
+                        - Michaella
+                    </p>
+                </div>
+
+                <!-- Letter 2: Madame Christie -->
+                <div id="letter-2" class="letter-pane hidden">
+                    <div class="text-sky-800 font-heading font-bold text-sm mb-1">🎁 De Madame Christie</div>
+                    <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
+                        En ce jour particulier, je tiens à te souhaiter un « Heureux Anniversaire » beaucoup de bonheur et un avenir rempli de succès.🍾 
+
+                        Par la même occasion je me permets de te donner quelques précieux conseils car tu pourrais être mon fils. Tu es à un moment important de ta vie où tu commences à construire l’adulte que tu deviendras plus tard donc je t’encourage à toujours croire en tes capacités. N’oublie jamais que la jeunesse est une étape précieuse dans la vie, une période où chaque décision peut contribuer à construire ou détruire ton avenir. Ne te laisse pas influencer par les mauvaises fréquentations, préserve ta dignité et ton respect pour toi-même. Garde la tête haute. 😊 
+
+                        Que cette nouvelle année t’apporte davantage de maturité et pleins de bonnes choses!🍾🎁.         
+
+                        - Madame Christie
+                    </p>
+                </div>
+
+                <!-- Letter 3: Mario / Cousin -->
+                <div id="letter-3" class="letter-pane hidden">
                     <div class="text-sky-800 font-heading font-bold text-sm mb-1">🎂 De ton cousin Mario 😁😎</div>
                     <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
                         Joyeux anniversaire à mon cousin, mon frère, mon conseiller et l’une des personnes les plus précieuses de ma vie ! 🥳🎉❤️
@@ -402,24 +411,24 @@
                     </p>
                 </div>
 
-                <!-- Letter 2: Tatie Nadjie -->
-                <div id="letter-2" class="letter-pane hidden">
+                <!-- Letter 4: Tatie Nadjie -->
+                <div id="letter-4" class="letter-pane hidden">
                     <div class="text-sky-800 font-heading font-bold text-sm mb-1">✨ De Tatie Nadjie</div>
                     <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
                         Kemly pa selman nevé m li se Pitit gasonm li se zanmi m menm si defwa knn gen ti dezakò antre nou li gen anpil defo konsa li gen bonte l tou mw ta renmen kemly apran patage Sal genyen ak moun paske li chich anpil 😆😆 mw ta renmen Bondye few fe succès nan lavi w pou vini yon gran homme avek anpil vale epi swiv rev ou renmen tet .
                     </p>
                 </div>
 
-                <!-- Letter 3: Marlie -->
-                <div id="letter-3" class="letter-pane hidden">
+                <!-- Letter 5: Marlie -->
+                <div id="letter-5" class="letter-pane hidden">
                     <div class="text-sky-800 font-heading font-bold text-sm mb-1">🌸 De Marlie</div>
                     <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
                         Ma mère dès son plus jeune âge désirait avoir deux enfants, un garçon étant l'aîné et une fille qui viendrait après le premier. Mais même au ventre de ma mère, je savais que je n'aimais être ni le dernier ni le plus petit ni avoir un frère pourtant je suis tombé dans la meilleure famille et sur le meilleur. Bien qu'il soit ennuyant parfois et orgueilleux cela n'effacera jamais l'amour fraternel que j'éprouve pour lui.
                     </p>
                 </div>
 
-                <!-- Letter 4: PDF Message -->
-                <div id="letter-4" class="letter-pane hidden">
+                <!-- Letter 6: PDF Message -->
+                <div id="letter-6" class="letter-pane hidden">
                     <div class="text-sky-800 font-heading font-bold text-sm mb-1">📖 De ton petit frère (PDF)</div>
                     <p class="text-slate-700 text-xs leading-relaxed whitespace-pre-line">
                         JOYEUX ANNIVERSAIRE, MON FRÈRE
@@ -448,47 +457,54 @@
             </div>
         </section>
 
-        <!-- PAGE 11: Dashboard with Spotify Playlist in Songs Tab -->
+        <!-- PAGE 11: Interactive Dashboard (Profile section removed, Spotify & Photos fixed) -->
         <section id="page-11" class="page-step w-full glass-card p-5 sm:p-6 rounded-3xl text-center flex flex-col items-center justify-between hidden opacity-0 transform scale-95 transition-all duration-500 h-[460px]">
             <h3 class="text-xl font-heading font-bold text-sky-900 mb-2">Espace Interactif ✨</h3>
 
-            <!-- Nav Tabs -->
+            <!-- Nav Tabs (Profil removed) -->
             <div class="flex rounded-xl bg-sky-200/60 p-1 w-full gap-1">
-                <button onclick="switchTab('profile')" id="tab-profile" class="flex-1 py-1.5 rounded-lg font-bold text-xs bg-sky-600 text-white shadow">Profil</button>
-                <button onclick="switchTab('songs')" id="tab-songs" class="flex-1 py-1.5 rounded-lg font-bold text-xs text-sky-800">Songs</button>
-                <button onclick="switchTab('photos')" id="tab-photos" class="flex-1 py-1.5 rounded-lg font-bold text-xs text-sky-800">Photos</button>
+                <button onclick="switchTab('songs')" id="tab-songs" class="flex-1 py-1.5 rounded-lg font-bold text-xs bg-sky-600 text-white shadow">Songs 🎵</button>
+                <button onclick="switchTab('photos')" id="tab-photos" class="flex-1 py-1.5 rounded-lg font-bold text-xs text-sky-800">Photos 📸</button>
             </div>
 
             <!-- Tab Contents -->
             <div class="w-full my-auto text-left">
-                <div id="content-profile" class="tab-content block bg-white/90 p-4 rounded-xl border border-sky-100 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-14 h-14 rounded-full bg-sky-500 flex items-center justify-center text-white text-2xl font-bold">👑</div>
-                        <div>
-                            <div class="font-bold text-sky-900 text-sm">Edou (King of 19)</div>
-                            <div class="text-xs text-slate-600">Âge : 19 ans</div>
-                            <div class="text-xs text-slate-600">Statut : Legend 🔥</div>
-                        </div>
+                
+                <!-- Songs Tab (Spotify Fixed with Direct Player & Backup Link) -->
+                <div id="content-songs" class="tab-content block bg-white/90 p-3 rounded-2xl border border-sky-100 shadow-sm text-center">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-sky-900"><i class="fa-brands fa-spotify text-emerald-500 text-sm mr-1"></i> Playlist d'Edou</span>
+                        <a href="https://open.spotify.com/playlist/0akW9Be58NFwywFRiDQ8Ln" target="_blank" class="text-[10px] bg-emerald-500 hover:bg-emerald-600 text-white px-2.5 py-1 rounded-full font-bold transition-all">
+                            Ouvrir Spotify <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+
+                    <div class="w-full rounded-xl overflow-hidden shadow-inner bg-black/5 flex items-center justify-center min-h-[170px]">
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/playlist/0akW9Be58NFwywFRiDQ8Ln?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="170" 
+                            frameBorder="0" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
                     </div>
                 </div>
 
-                <!-- Spotify Playlist Integration -->
-                <div id="content-songs" class="tab-content hidden bg-white/90 p-2 rounded-xl border border-sky-100 shadow-sm">
-                    <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/playlist/0akW9Be58NFwywFRiDQ8Ln?utm_source=generator&theme=0" 
-                        width="100%" 
-                        height="210" 
-                        frameBorder="0" 
-                        allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                    </iframe>
+                <!-- Photos Tab (Images displayed) -->
+                <div id="content-photos" class="tab-content hidden grid grid-cols-2 gap-3">
+                    <div class="h-44 bg-gradient-to-br from-sky-100 to-sky-200 rounded-2xl border border-sky-200 p-2 flex flex-col items-center justify-center text-center shadow-sm relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=400&q=80" alt="19 Ans" class="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-sky-900/80 via-transparent to-transparent rounded-2xl"></div>
+                        <span class="z-10 mt-auto text-white text-xs font-bold pb-1 drop-shadow">📸 19 Ans</span>
+                    </div>
+                    <div class="h-44 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl border border-blue-200 p-2 flex flex-col items-center justify-center text-center shadow-sm relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=400&q=80" alt="Souvenirs" class="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent rounded-2xl"></div>
+                        <span class="z-10 mt-auto text-white text-xs font-bold pb-1 drop-shadow">🎉 Souvenirs</span>
+                    </div>
                 </div>
 
-                <div id="content-photos" class="tab-content hidden grid grid-cols-2 gap-2">
-                    <div class="h-20 bg-sky-200 rounded-lg flex items-center justify-center text-sky-800 text-xs font-bold">📸 19 Ans</div>
-                    <div class="h-20 bg-blue-200 rounded-lg flex items-center justify-center text-blue-800 text-xs font-bold">🎉 Souvenirs</div>
-                </div>
             </div>
 
             <button onclick="nextPage()" class="btn-glow bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold py-3 px-6 rounded-2xl text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
@@ -502,7 +518,6 @@
                 Joyeux 19 Ans Edoudou ! 🎉
             </h2>
 
-            <!-- Dancing Snoopy SVG Animated -->
             <div class="w-36 h-36 my-2 relative flex items-center justify-center">
                 <svg viewBox="0 0 100 100" class="w-full h-full animate-bounce">
                     <ellipse cx="50" cy="35" rx="18" ry="14" fill="#ffffff" />
@@ -539,15 +554,13 @@
         let currentPage = 1;
         const totalPages = 12;
         let currentLetter = 1;
-        const totalLetters = 4;
+        const totalLetters = 6;
 
         function updatePageUI() {
-            // Update Page Counter & Progress Bar
             document.getElementById('page-counter').innerText = `Page ${currentPage} / ${totalPages}`;
             const progressPercent = (currentPage / totalPages) * 100;
             document.getElementById('progress-bar').style.width = `${progressPercent}%`;
 
-            // Toggle Previous Button Visibility
             const prevBtn = document.getElementById('prev-btn');
             if (currentPage > 1) {
                 prevBtn.classList.remove('hidden');
@@ -555,7 +568,6 @@
                 prevBtn.classList.add('hidden');
             }
 
-            // Show/Hide Pages with smooth Fade transition
             for (let i = 1; i <= totalPages; i++) {
                 const page = document.getElementById(`page-${i}`);
                 if (page) {
@@ -572,7 +584,6 @@
                 }
             }
 
-            // Trigger confetti automatically on page 12
             if (currentPage === 12) {
                 triggerConfetti();
             }
@@ -592,7 +603,6 @@
             }
         }
 
-        // Blow Candle Logic (Page 6)
         function blowCandles() {
             const flames = document.querySelectorAll('.candle-flame');
             flames.forEach(flame => {
@@ -603,7 +613,6 @@
             triggerConfetti();
         }
 
-        // Open Gift Box Logic (Page 8)
         function openGift() {
             const giftBox = document.getElementById('gift-box');
             const giftIcon = document.getElementById('gift-icon');
@@ -617,16 +626,17 @@
             triggerConfetti();
         }
 
-        // Letters Carousel Controller (Page 10)
         function updateLetterUI() {
             document.getElementById('letter-counter').innerText = `Lettre ${currentLetter} sur ${totalLetters}`;
             
             for (let i = 1; i <= totalLetters; i++) {
                 const pane = document.getElementById(`letter-${i}`);
-                if (i === currentLetter) {
-                    pane.classList.remove('hidden');
-                } else {
-                    pane.classList.add('hidden');
+                if (pane) {
+                    if (i === currentLetter) {
+                        pane.classList.remove('hidden');
+                    } else {
+                        pane.classList.add('hidden');
+                    }
                 }
             }
 
@@ -664,7 +674,6 @@
             }
         }
 
-        // Tab Switcher for Page 11 Dashboard
         function switchTab(tabName) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(c => c.classList.add('hidden'));
@@ -677,11 +686,12 @@
 
             document.getElementById(`content-${tabName}`).classList.remove('hidden');
             const activeBtn = document.getElementById(`tab-${tabName}`);
-            activeBtn.classList.add('bg-sky-600', 'text-white', 'shadow');
-            activeBtn.classList.remove('text-sky-800');
+            if (activeBtn) {
+                activeBtn.classList.add('bg-sky-600', 'text-white', 'shadow');
+                activeBtn.classList.remove('text-sky-800');
+            }
         }
 
-        // Confetti Fireworks Effect
         function triggerConfetti() {
             if (typeof confetti === 'function') {
                 confetti({
@@ -693,11 +703,8 @@
             }
         }
 
-        // Initial setup
         updatePageUI();
         updateLetterUI();
     </script>
 </body>
 </html>
-
-
